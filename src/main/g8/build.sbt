@@ -9,14 +9,16 @@ resolvers += Resolver.jcenterRepo
 libraryDependencies ++= {
   val catsV          = "$cats_version$"
   val ficusV         = "$ficus_version$"
+  val scalaTestV     = "$scala_test_version$"
   val scalaMockV     = "$scala_mock_version$"
   val catsScalatestV = "$cats_scalatest_version$"
 
   Seq(
-    "org.typelevel"    %% "cats-core"                   % catsV,
-    "com.iheart"       %% "ficus"                       % ficusV,
-    "org.scalamock"    %% "scalamock-scalatest-support" % scalaMockV % "it,test",
-    "com.ironcorelabs" %% "cats-scalatest"              % catsScalatestV % "it,test"
+    "org.typelevel"    %% "cats-core"      % catsV,
+    "com.iheart"       %% "ficus"          % ficusV,
+    "org.scalatest"     %% "scalatest"     % scalaTestV % "it,test",
+    "org.scalamock"     %% "scalamock"     % scalaMockV % "it,test",
+    "com.ironcorelabs" %% "cats-scalatest" % catsScalatestV % "it,test"
   )
 }
 
